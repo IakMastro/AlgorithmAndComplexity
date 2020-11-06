@@ -18,13 +18,13 @@ def DFS(node, visited=None, preorder=None, postorder=None):
 
     if node not in visited:
         visited.append(node)
-        # preorder[node] = clock
-        # clock += 1
+        preorder[node] = clock
+        clock += 1
 
         for neighbour_node in graph[node]:
             DFS(neighbour_node, visited, preorder, postorder)
 
-        # postorder[node] = clock
-        # clock += 1
+        postorder[node] = clock
+        clock += 1
 
-    return visited
+    return visited, preorder, postorder
