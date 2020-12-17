@@ -1,12 +1,4 @@
-def BFS(node):
-    graph = {
-        "1": {"2", "3"},
-        "2": {"1"},
-        "3": {"1", "4", "5"},
-        "4": {"3"},
-        "5": {"3"}
-    }
-
+def bfs(node, graph):
     clock = 0
     queue = []
     preorder = {}
